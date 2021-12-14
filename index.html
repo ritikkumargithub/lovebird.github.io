@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Bird</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="main">
+    
+        
+            <input type="text" placeholder="Your Name" id="name">
+            <div> <span>+</span></div>
+            <input type="text" placeholder="Love Name" id="lname"><br>
+
+            <button onclick="checklove()">CHECK</button><br>
+
+            <input type="text" placeholder="LOVE PERCENTAGE" id="value">
+        
+       
+    </div>
+
+    <script>
+        function checklove(){
+
+            var name = document.getElementById('name').value;
+            var lname = document.getElementById('lname').value;
+            if(name == ""){
+                alert('Please enter your name');
+            }else if(name.length <=2){
+                alert('Min charactor is 3');
+            }else if(!isNaN(name)){
+                alert('Numbers are not allowed');
+            }
+            else if(lname == ""){
+                alert('Please enter your love name');
+            }else if(lname.length <=2){
+                alert('Min charactor is 3');
+            }else if(!isNaN(lname)){
+                alert('Numbers are not allowed');
+            }else{
+                var loveData = Math.random() * 100;
+            var data = Math.floor(loveData);
+            document.getElementById('value').value = data + '%';
+            }
+        
+        }
+    </script>
+</body>
+</html>
